@@ -17,7 +17,7 @@ class NewsDataRepository extends NewsRepository {
     // todo hardcoded params
     log("getTopHeadlines launch");
     var response = await _remote.getTopHeadlinesNews(
-        query: null, category: category.toString(), page: 1, pageSize: 10);
+        query: null, category: category.name, page: 1, pageSize: 10);
 
     return response.toListDomain();
   }

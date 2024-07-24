@@ -17,6 +17,9 @@ class NewsModule {
           key: Env.newsApiKey,
         ));
 
+    // MOCK DATA
+    // getIt.registerLazySingleton<NewsApi>(() => NewsMockApi());
+
     getIt.registerLazySingleton<NewsRepository>(
         () => NewsDataRepository(remote: getIt<NewsApi>()));
   }
